@@ -149,7 +149,7 @@ public class LookAheadReader extends Reader {
 	public boolean at(String s) throws IOException {
 		if (eof) 
 			return false;
-    int len=s.length()
+    int len=s.length();
 		for (int i=0; i<len; i++) 
       if (peek(i)!=s.charAt(i)) 
       	return false;
