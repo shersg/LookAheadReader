@@ -8,5 +8,7 @@ The capacity is the maximum lookahead (in number of characters). This must be sp
 
 The intended use is parsing source code from start to finish in one thread. Not thread safe.
 
+The javadoc are [here](https://www.sherst.net/javadoc/net/sherst/io/LookAheadReader.html).
+
 Author:
     sherstDotNet@yahoo.com 
