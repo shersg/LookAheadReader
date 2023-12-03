@@ -36,7 +36,10 @@ import java.io.Reader;
  * The capacity is the maximum lookahead (in number of characters).
  * This must be specified when the {@link LookAheadReader} is created.
  * {@link LookAheadReader} uses a fast but fixed-size ring buffer.
- * @author Steve Shering
+ * <p>
+ * The intended use is parsing source code from start to finish in one thread. Not thread safe.
+ * 
+ * @author sherstDotNet@yahoo.com
  */
 public class LookAheadReader extends Reader {
 	private char[] arr;
@@ -157,7 +160,7 @@ public class LookAheadReader extends Reader {
     }
 
 	/**
-	 * Returns {@code true} if the next {@code chars}s that will be read 
+	 * Returns {@code true} if the next {@code chars} that will be read 
 	 * is {@code #}.
    * <p>
 	 * A "comment" starts with {@code #}
@@ -181,10 +184,10 @@ public class LookAheadReader extends Reader {
     }
 
 	/**
-   * Returns {@code true} if all the next <{@code chars} that will be read is '\n' 
+   * Returns {@code true} if all the next {@code char} that will be read is '\n' 
    * or '\r' or if {@link #atEOF()}.
    * 
-   * @return {@code true} if all the next <{@code chars} that will be read is '\n' 
+   * @return {@code true} if all the next {@code char} that will be read is '\n' 
    * or '\r' or if {@link #atEOF()}
    * @throws IOException
    */
@@ -358,7 +361,7 @@ public class LookAheadReader extends Reader {
   	;}
   
   /**
-   * Tells whether this stream supports the {@link #mark(int)} operation, which it does, 
+   * Returns {@code true} if this reader supports the {@link #mark(int)} operation, which it does, 
    * but only up to the maximum capacity of the buffer.
    *  
    * @return {@code true}
@@ -469,7 +472,7 @@ public class LookAheadReader extends Reader {
   	}
 	
 	/**
-	 * Tells whether this stream is ready to be read.
+	 * Returns {@code true} if this reader is ready to be read.
 	 * 
 	 * @return {@code true} if the next read() is guaranteed not to block for input,
 	 * {@code false} otherwise. 
