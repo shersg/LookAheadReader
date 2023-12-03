@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2022-2023 Steve Shering
+Copyright (c) 2022-2023 Steve Shering  (sherstDotNet@yahoo.com)
 
 All rights reserved.
 
